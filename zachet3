@@ -1,0 +1,30 @@
+#include <iostream>
+#include <locale>
+#define n 3
+using namespace std;
+int a[n][n];
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int i, j;
+    int d;
+    cout << "Введите элементы матрицы" << endl;
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            cin >> a[i][j];
+        }
+    }
+    cout << "Матрица:" << endl;
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            cout << a[i][j] << ' ';
+        }
+    }
+    d = ((a[0][0] * a[1][1] * a[2][2]) + (a[0][1] * a[1][2] * a[2][0]) + (a[1][0] * a[0][2] * a[2][1]) - (a[2][0] * a[1][1] * a[0][2]) - (a[0][0] * a[2][1] * a[1][2]) - (a[1][0] * a[0][1] * a[2][2]));
+    cout << endl << "Определитель матрицы = " << d;
+    return 0;
+}
