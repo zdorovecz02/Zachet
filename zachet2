@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int i;
+    string kat;
+    char c;
+    cin >> c;
+    cin >> kat;
+    for (i = 0; i < kat.length(); i++)
+    {
+        if (kat[i] == c)
+            cout << i << endl;
+    }
+    return 0;
+}
